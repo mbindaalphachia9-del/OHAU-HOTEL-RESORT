@@ -9,22 +9,28 @@ export default function Home() {
         backgroundColor: "#000",
         color: "#fff",
         minHeight: "100vh",
-        textAlign: "center",
-        padding: "40px",
+        padding: "30px",
         fontFamily: "serif",
       }}
     >
-      <div style={{ marginTop: "100px" }}>
-        <div
-          style={{
-            color: "gold",
-            fontSize: "20px",
-            letterSpacing: "8px",
-          }}
-        >
-          ✦ ✦ ✦ ✦ ✦
-        </div>
+      <nav
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "20px",
+          marginBottom: "60px",
+        }}
+      >
+        <Link href="/">Home</Link>
+        <Link href="/about">About</Link>
+        <Link href="/rooms">Rooms</Link>
+        <Link href="/gallery">Gallery</Link>
+        <Link href="/contact">Contact</Link>
+        <Link href="/location">Location</Link>
+        <Link href="/reviews">Reviews</Link>
+      </nav>
 
+      <div style={{ textAlign: "center", marginTop: "100px" }}>
         <h1
           style={{
             color: "gold",
@@ -32,18 +38,13 @@ export default function Home() {
             letterSpacing: "8px",
           }}
         >
-          OAHU
+          OAHU HOTEL & RESORT
         </h1>
-
-        <h2 style={{ color: "white", letterSpacing: "6px" }}>
-          HOTEL & RESORT
-        </h2>
 
         <p
           style={{
             color: "gold",
-            fontSize: "20px",
-            fontStyle: "italic",
+            fontSize: "22px",
           }}
         >
           Stay. Relax. Repeat.
@@ -55,8 +56,8 @@ export default function Home() {
               backgroundColor: "gold",
               color: "black",
               padding: "15px 35px",
-              borderRadius: "10px",
               border: "none",
+              borderRadius: "10px",
               fontSize: "18px",
               cursor: "pointer",
               marginTop: "20px",
