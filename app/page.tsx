@@ -4,143 +4,94 @@ export default function Home() {
       style={{
         backgroundColor: "#000",
         color: "#fff",
+        minHeight: "100vh",
+        textAlign: "center",
+        padding: "40px",
         fontFamily: "serif",
       }}
     >
-      {/* Hero Section */}
-      <section
-        style={{
-          minHeight: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          textAlign: "center",
-          padding: "40px",
-        }}
-      >
-        <div>
-          <div
-            style={{
-              color: "gold",
-              fontSize: "20px",
-              letterSpacing: "8px",
-            }}
-          >
-            ✦ ✦ ✦ ✦ ✦
-          </div>
-
-          <h1
-            style={{
-              color: "gold",
-              fontSize: "72px",
-              marginBottom: "0",
-              letterSpacing: "8px",
-            }}
-          >
-            OAHU
-          </h1>
-
-          <h2
-            style={{
-              color: "white",
-              marginTop: "10px",
-              letterSpacing: "6px",
-            }}
-          >
-            HOTEL & RESORT
-          </h2>
-
-          <p
-            style={{
-              color: "gold",
-              fontStyle: "italic",
-              fontSize: "20px",
-            }}
-          >
-            Stay. Relax. Repeat.
-          </p>
+      <div style={{ marginTop: "100px" }}>
+        <div
+          style={{
+            color: "gold",
+            fontSize: "20px",
+            letterSpacing: "8px",
+          }}
+        >
+          ✦ ✦ ✦ ✦ ✦
         </div>
 
+        <h1
+          style={{
+            color: "gold",
+            fontSize: "70px",
+            letterSpacing: "8px",
+          }}
+        >
+          OAHU
+        </h1>
+
+        <h2
+          style={{
+            color: "white",
+            letterSpacing: "6px",
+          }}
+        >
+          HOTEL & RESORT
+        </h2>
+
+        <p
+          style={{
+            color: "gold",
+            fontSize: "20px",
+            fontStyle: "italic",
+          }}
+        >
+          Stay. Relax. Repeat.
+        </p>
+
         <button
-          onClick={() =>
-            (window.location.href =
-              "mailto:reservations@oahuhotelresort.com")
-          }
+          onClick={() => (window.location.href = "/book")}
           style={{
             backgroundColor: "gold",
             color: "black",
             padding: "15px 35px",
-            border: "none",
             borderRadius: "10px",
+            border: "none",
             fontSize: "18px",
             cursor: "pointer",
-            marginTop: "30px",
+            marginTop: "20px",
           }}
         >
           Book Your Stay
         </button>
-      </section>
+      </div>
 
-      {/* Rooms */}
-      <section style={{ padding: "50px" }}>
+      <section style={{ marginTop: "100px" }}>
         <h2 style={{ color: "gold" }}>🏨 Rooms & Suites</h2>
+        <p>Deluxe Room • Ocean View Suite • Presidential Suite</p>
 
-        <h3>Deluxe Room</h3>
-        <p>Elegant comfort with luxury furnishings.</p>
-
-        <h3>Ocean View Suite</h3>
-        <p>Private balcony overlooking Waikiki Beach.</p>
-
-        <h3>Presidential Suite</h3>
-        <p>The finest experience with panoramic ocean views.</p>
-      </section>
-
-      {/* Dining */}
-      <section style={{ padding: "50px" }}>
-        <h2 style={{ color: "gold" }}>🍽 Fine Dining</h2>
+        <h2 style={{ color: "gold", marginTop: "50px" }}>
+          🍽 Fine Dining
+        </h2>
         <p>
-          Enjoy world-class cuisine, tropical cocktails and sunset dinners.
-        </p>
-      </section>
-
-      {/* Spa */}
-      <section style={{ padding: "50px" }}>
-        <h2 style={{ color: "gold" }}>🏊 Spa & Infinity Pool</h2>
-        <p>
-          Relax with premium spa treatments and breathtaking ocean views.
-        </p>
-      </section>
-
-      {/* Gallery */}
-      <section style={{ padding: "50px" }}>
-        <h2 style={{ color: "gold" }}>📸 Gallery</h2>
-        <p>
-          Experience paradise with beautiful beaches and luxury amenities.
-        </p>
-      </section>
-
-      {/* Reviews */}
-      <section style={{ padding: "50px" }}>
-        <h2 style={{ color: "gold" }}>⭐ Guest Reviews</h2>
-
-        <p>
-          "Absolutely incredible! The service and views were amazing." — Sarah
-          M.
+          World-class cuisine and unforgettable tropical experiences.
         </p>
 
+        <h2 style={{ color: "gold", marginTop: "50px" }}>
+          🏊 Spa & Infinity Pool
+        </h2>
         <p>
-          "One of the best resorts we've ever stayed in." — Michael T.
+          Relax and enjoy breathtaking views of Waikiki Beach.
         </p>
-      </section>
 
-      {/* Contact */}
-      <section style={{ padding: "50px" }}>
-        <h2 style={{ color: "gold" }}>📞 Contact Us</h2>
+        <h2 style={{ color: "gold", marginTop: "50px" }}>
+          ⭐ Guest Reviews
+        </h2>
 
-        <p>Email: reservations@oahuhotelresort.com</p>
+        <p>"Amazing stay! Beautiful ocean views." — Sarah M.</p>
 
-        <p>Waikiki, Oahu, Hawaii</p>
+        <p>"One of the finest resorts in Hawaii." — Michael T.</p>
       </section>
     </main>
   );
