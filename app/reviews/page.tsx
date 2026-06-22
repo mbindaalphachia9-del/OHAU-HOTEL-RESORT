@@ -1,11 +1,29 @@
 export default function ReviewsPage() {
   return (
-    <main style={{background:"#000",color:"#fff",minHeight:"100vh",padding:"40px"}}>
-      <h1 style={{color:"gold"}}>Guest Reviews</h1>
+    <main style={{ padding: "80px 8%" }}>
+      <h1 className="gold" style={{ textAlign: "center" }}>
+        Guest Reviews
+      </h1>
 
-      <p>⭐⭐⭐⭐⭐ Amazing stay! - Sarah M.</p>
-      <p>⭐⭐⭐⭐⭐ Outstanding service! - Michael T.</p>
-      <p>⭐⭐⭐⭐⭐ Beautiful resort! - David W.</p>
+      <div className="grid">
+        <div className="card">
+          ⭐⭐⭐⭐⭐
+          <p>"Amazing stay and beautiful ocean views."</p>
+          <p>- Sarah M.</p>
+        </div>
+
+        <div className="card">
+          ⭐⭐⭐⭐⭐
+          <p>"Outstanding service and luxury."</p>
+          <p>- Michael T.</p>
+        </div>
+
+        <div className="card">
+          ⭐⭐⭐⭐⭐
+          <p>"One of Hawaii's finest resorts."</p>
+          <p>- David W.</p>
+        </div>
+      </div>
     </main>
   );
 }
