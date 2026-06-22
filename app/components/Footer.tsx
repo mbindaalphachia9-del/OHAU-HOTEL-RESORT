@@ -1,7 +1,9 @@
 export default function Footer() {
   return (
     <footer>
-      <h2 style={{ color: "gold" }}>OAHU HOTEL & RESORT</h2>
+      <h2 className="gold">
+        OAHU HOTEL & RESORT
+      </h2>
 
       <br />
 
@@ -13,7 +15,13 @@ export default function Footer() {
 
       <br />
 
-      <p>© 2026 OAHU HOTEL & RESORT. All rights reserved.</p>
+      <p>
+        Experience luxury, elegance and unforgettable moments.
+      </p>
+
+      <br />
+
+      <p>© 2026 OAHU HOTEL & RESORT</p>
     </footer>
   );
 }
