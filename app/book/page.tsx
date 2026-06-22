@@ -1,6 +1,14 @@
 "use client";
 
+import { useState } from "react";
+
 export default function BookPage() {
+  const [submitted, setSubmitted] = useState(false);
+
+  function submitReservation() {
+    setSubmitted(true);
+  }
+
   return (
     <main
       style={{
@@ -25,9 +33,13 @@ export default function BookPage() {
         }}
       >
         <input placeholder="Full Name" />
+
         <input placeholder="Email Address" />
+
         <input placeholder="Phone Number" />
+
         <input type="date" />
+
         <input type="date" />
 
         <select>
@@ -37,6 +49,7 @@ export default function BookPage() {
         </select>
 
         <button
+          onClick={submitReservation}
           style={{
             backgroundColor: "gold",
             color: "black",
@@ -44,10 +57,24 @@ export default function BookPage() {
             border: "none",
             borderRadius: "10px",
             cursor: "pointer",
+            fontSize: "18px",
           }}
         >
           Submit Reservation
         </button>
+
+        {submitted && (
+          <div
+            style={{
+              marginTop: "20px",
+              color: "lightgreen",
+              textAlign: "center",
+              fontSize: "18px",
+            }}
+          >
+            ✅ Reservation submitted successfully!
+          </div>
+        )}
       </div>
     </main>
   );
