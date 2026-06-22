@@ -4,166 +4,101 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main
-      style={{
-        backgroundColor: "#000",
-        color: "white",
-        minHeight: "100vh",
-      }}
-    >
-      {/* Hero */}
+    <main>
+      {/* Hero Section */}
+      <section className="hero">
+        <h1>OAHU HOTEL & RESORT</h1>
 
-      <section
-        style={{
-          textAlign: "center",
-          padding: "120px 20px",
-        }}
-      >
-        <h1
-          style={{
-            color: "gold",
-            fontSize: "80px",
-            letterSpacing: "8px",
-          }}
-        >
-          OAHU HOTEL & RESORT
-        </h1>
-
-        <p
-          style={{
-            fontSize: "25px",
-          }}
-        >
-          Stay. Relax. Repeat.
-        </p>
-
-        <p
-          style={{
-            maxWidth: "700px",
-            margin: "auto",
-            color: "#ccc",
-          }}
-        >
-          Experience world-class luxury, ocean views, fine dining,
-          and unforgettable memories in Hawaii.
+        <p>
+          Experience luxury, elegance and breathtaking ocean views in the
+          heart of Waikiki, Hawaii.
         </p>
 
         <Link href="/book">
-          <button
-            style={{
-              marginTop: "30px",
-              backgroundColor: "gold",
-              color: "black",
-              border: "none",
-              padding: "18px 40px",
-              borderRadius: "15px",
-              cursor: "pointer",
-              fontSize: "18px",
-            }}
-          >
-            Book Your Stay
-          </button>
+          <button className="primary-btn">Book Your Stay</button>
         </Link>
       </section>
 
       {/* Rooms */}
-
-      <section style={{ padding: "50px" }}>
-        <h1 style={{ color: "gold", textAlign: "center" }}>
+      <section>
+        <h1 className="gold" style={{ textAlign: "center" }}>
           Luxury Rooms
         </h1>
 
-        <div
-          style={{
-            display: "grid",
-            gap: "30px",
-            marginTop: "40px",
-          }}
-        >
-          <div
-            style={{
-              backgroundColor: "#111",
-              padding: "30px",
-              borderRadius: "20px",
-            }}
-          >
+        <div className="grid">
+          <div className="card">
             <h2>🏨 Deluxe Room</h2>
-            <p>$299/night</p>
+            <p>$299 / night</p>
+            <p>King Bed • WiFi • Balcony • Smart TV</p>
           </div>
 
-          <div
-            style={{
-              backgroundColor: "#111",
-              padding: "30px",
-              borderRadius: "20px",
-            }}
-          >
+          <div className="card">
             <h2>🌊 Ocean View Suite</h2>
-            <p>$599/night</p>
+            <p>$599 / night</p>
+            <p>Ocean View • Lounge Area • King Bed</p>
           </div>
 
-          <div
-            style={{
-              backgroundColor: "#111",
-              padding: "30px",
-              borderRadius: "20px",
-            }}
-          >
+          <div className="card">
             <h2>👑 Presidential Suite</h2>
-            <p>$1299/night</p>
+            <p>$1299 / night</p>
+            <p>Private Jacuzzi • VIP Service • Ocean View</p>
           </div>
         </div>
       </section>
 
       {/* Amenities */}
-
-      <section style={{ padding: "50px" }}>
-        <h1 style={{ color: "gold", textAlign: "center" }}>
+      <section>
+        <h1 className="gold" style={{ textAlign: "center" }}>
           Amenities
         </h1>
 
-        <div
-          style={{
-            display: "grid",
-            gap: "20px",
-            marginTop: "40px",
-          }}
-        >
-          <div>🏊 Infinity Pool</div>
-          <div>🍽 Fine Dining</div>
-          <div>🧖 Spa & Wellness</div>
-          <div>🏖 Beach Access</div>
+        <div className="grid">
+          <div className="card">
+            <h2>🏊 Infinity Pool</h2>
+            <p>Relax with breathtaking ocean views.</p>
+          </div>
+
+          <div className="card">
+            <h2>🍽 Fine Dining</h2>
+            <p>World-class cuisine and unforgettable experiences.</p>
+          </div>
+
+          <div className="card">
+            <h2>🧖 Spa & Wellness</h2>
+            <p>Luxury treatments and complete relaxation.</p>
+          </div>
+
+          <div className="card">
+            <h2>🏖 Beach Access</h2>
+            <p>Private access to Hawaii's beautiful beaches.</p>
+          </div>
         </div>
       </section>
 
       {/* Reviews */}
-
-      <section style={{ padding: "50px" }}>
-        <h1 style={{ color: "gold", textAlign: "center" }}>
+      <section>
+        <h1 className="gold" style={{ textAlign: "center" }}>
           Guest Reviews
         </h1>
 
-        <div
-          style={{
-            backgroundColor: "#111",
-            padding: "30px",
-            borderRadius: "20px",
-            marginTop: "40px",
-          }}
-        >
-          ⭐⭐⭐⭐⭐ Amazing stay! Beautiful ocean views.
-        </div>
+        <div className="grid">
+          <div className="card">
+            ⭐⭐⭐⭐⭐
+            <p>"Amazing stay! Beautiful ocean views."</p>
+            <p>- Sarah M.</p>
+          </div>
 
-        <br />
+          <div className="card">
+            ⭐⭐⭐⭐⭐
+            <p>"Outstanding service and luxury."</p>
+            <p>- Michael T.</p>
+          </div>
 
-        <div
-          style={{
-            backgroundColor: "#111",
-            padding: "30px",
-            borderRadius: "20px",
-          }}
-        >
-          ⭐⭐⭐⭐⭐ One of Hawaii's finest resorts.
+          <div className="card">
+            ⭐⭐⭐⭐⭐
+            <p>"One of Hawaii's finest resorts."</p>
+            <p>- David W.</p>
+          </div>
         </div>
       </section>
     </main>
