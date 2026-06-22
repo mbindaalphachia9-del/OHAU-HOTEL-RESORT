@@ -1,10 +1,44 @@
 export default function AboutPage() {
   return (
-    <main style={{ backgroundColor: "#000", color: "#fff", minHeight: "100vh", padding: "40px" }}>
-      <h1 style={{ color: "gold" }}>About OAHU HOTEL & RESORT</h1>
+    <main style={{ padding: "80px 8%" }}>
+      <h1 className="gold">
+        About OAHU HOTEL & RESORT
+      </h1>
+
       <p>
-        Experience luxury, elegance and unforgettable memories in the heart of Waikiki, Oahu, Hawaii.
+        Nestled in the heart of Waikiki, Hawaii,
+        OAHU HOTEL & RESORT offers world-class
+        luxury, breathtaking ocean views and
+        unforgettable experiences.
       </p>
+
+      <br />
+
+      <h2 className="gold">
+        Why Choose Us?
+      </h2>
+
+      <div className="grid">
+        <div className="card">
+          🌴 Prime Location
+        </div>
+
+        <div className="card">
+          🏖 Private Beach Access
+        </div>
+
+        <div className="card">
+          🍽 Fine Dining
+        </div>
+
+        <div className="card">
+          🧖 Luxury Spa
+        </div>
+
+        <div className="card">
+          ⭐ 5-Star Service
+        </div>
+      </div>
     </main>
   );
 }
