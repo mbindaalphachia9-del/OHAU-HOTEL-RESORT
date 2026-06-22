@@ -1,4 +1,16 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 export default function AdminPage() {
+  const [reservations, setReservations] = useState<any[]>([]);
+
+  useEffect(() => {
+    fetch("/api/reservations")
+      .then((res) => res.json())
+      .then((data) => setReservations(data));
+  }, []);
+
   return (
     <main
       style={{
@@ -9,63 +21,42 @@ export default function AdminPage() {
         fontFamily: "serif",
       }}
     >
-      <h1
-        style={{
-          color: "gold",
-          textAlign: "center",
-          fontSize: "50px",
-        }}
-      >
+      <h1 style={{ color: "gold", textAlign: "center" }}>
         OAHU HOTEL & RESORT
       </h1>
 
-      <h2
-        style={{
-          color: "gold",
-          textAlign: "center",
-        }}
-      >
+      <h2 style={{ textAlign: "center" }}>
         Admin Dashboard
       </h2>
 
-      <div
+      <table
         style={{
-          maxWidth: "1000px",
-          margin: "50px auto",
-          backgroundColor: "#111",
-          padding: "30px",
-          borderRadius: "20px",
+          width: "100%",
+          marginTop: "40px",
         }}
       >
-        <h3 style={{ color: "gold" }}>Reservations</h3>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Room</th>
+            <th>Check In</th>
+            <th>Check Out</th>
+            <th>Status</th>
+          </tr>
+        </thead>
 
-        <table
-          style={{
-            width: "100%",
-            borderCollapse: "collapse",
-          }}
-        >
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Room</th>
-              <th>Check-In</th>
-              <th>Check-Out</th>
-              <th>Status</th>
+        <tbody>
+          {reservations.map((r) => (
+            <tr key={r.id}>
+              <td>{r.name}</td>
+              <td>{r.room}</td>
+              <td>{r.checkIn}</td>
+              <td>{r.checkOut}</td>
+              <td>{r.status}</td>
             </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>John Smith</td>
-              <td>Ocean View Suite</td>
-              <td>2026-07-10</td>
-              <td>2026-07-15</td>
-              <td style={{ color: "lime" }}>Confirmed</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+          ))}
+        </tbody>
+      </table>
     </main>
   );
 }
