@@ -1,82 +1,39 @@
 export default function GalleryPage() {
   return (
-    <main
-      style={{
-        backgroundColor: "#000",
-        color: "#fff",
-        minHeight: "100vh",
-        padding: "40px",
-      }}
-    >
-      <h1
-        style={{
-          color: "gold",
-          textAlign: "center",
-          marginBottom: "50px",
-        }}
-      >
+    <main style={{ padding: "80px 8%" }}>
+      <h1 className="gold" style={{ textAlign: "center" }}>
         Gallery
       </h1>
 
-      <div
-        style={{
-          display: "grid",
-          gap: "30px",
-        }}
-      >
-        <div
-          style={{
-            backgroundColor: "#111",
-            padding: "30px",
-            borderRadius: "20px",
-          }}
-        >
-          <h2>🏖 Infinity Pool</h2>
-          <p>Relax with breathtaking ocean views.</p>
+      <div className="grid">
+        <div className="card">
+          <h2>🏖 Beach Paradise</h2>
+          <p>Crystal clear waters and white sands.</p>
         </div>
 
-        <div
-          style={{
-            backgroundColor: "#111",
-            padding: "30px",
-            borderRadius: "20px",
-          }}
-        >
-          <h2>🌴 Beach Paradise</h2>
-          <p>Experience the beauty of Waikiki Beach.</p>
+        <div className="card">
+          <h2>🏊 Infinity Pool</h2>
+          <p>Relax with breathtaking views.</p>
         </div>
 
-        <div
-          style={{
-            backgroundColor: "#111",
-            padding: "30px",
-            borderRadius: "20px",
-          }}
-        >
+        <div className="card">
           <h2>🍽 Fine Dining</h2>
-          <p>World-class cuisine and unforgettable evenings.</p>
+          <p>World-class cuisine and service.</p>
         </div>
 
-        <div
-          style={{
-            backgroundColor: "#111",
-            padding: "30px",
-            borderRadius: "20px",
-          }}
-        >
-          <h2>🧖 Luxury Spa</h2>
-          <p>Relax and rejuvenate in complete comfort.</p>
+        <div className="card">
+          <h2>🧖 Spa & Wellness</h2>
+          <p>Luxury treatments and relaxation.</p>
         </div>
 
-        <div
-          style={{
-            backgroundColor: "#111",
-            padding: "30px",
-            borderRadius: "20px",
-          }}
-        >
-          <h2>🏨 Premium Suites</h2>
-          <p>Elegant rooms with exceptional comfort.</p>
+        <div className="card">
+          <h2>🏨 Luxury Suites</h2>
+          <p>Elegant rooms designed for comfort.</p>
+        </div>
+
+        <div className="card">
+          <h2>🌴 Tropical Gardens</h2>
+          <p>Beautiful scenery throughout the resort.</p>
         </div>
       </div>
     </main>
