@@ -6,47 +6,38 @@ export default function Navbar() {
   return (
     <nav
       style={{
-        backgroundColor: "#111",
-        padding: "20px",
+        background: "#080808",
+        borderBottom: "1px solid #222",
+        padding: "20px 8%",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
+        position: "sticky",
+        top: 0,
+        zIndex: 100,
       }}
     >
-      <h1
+      <h2
         style={{
           color: "gold",
-          letterSpacing: "5px",
+          letterSpacing: "4px",
         }}
       >
         OAHU HOTEL & RESORT
-      </h1>
+      </h2>
 
       <div
         style={{
           display: "flex",
-          gap: "20px",
+          gap: "25px",
         }}
       >
-        <Link href="/" style={{ color: "white" }}>
-          Home
-        </Link>
-
-        <Link href="/about" style={{ color: "white" }}>
-          About
-        </Link>
-
-        <Link href="/rooms" style={{ color: "white" }}>
-          Rooms
-        </Link>
-
-        <Link href="/gallery" style={{ color: "white" }}>
-          Gallery
-        </Link>
-
-        <Link href="/contact" style={{ color: "white" }}>
-          Contact
-        </Link>
+        <Link href="/">Home</Link>
+        <Link href="/about">About</Link>
+        <Link href="/rooms">Rooms</Link>
+        <Link href="/gallery">Gallery</Link>
+        <Link href="/contact">Contact</Link>
+        <Link href="/reviews">Reviews</Link>
       </div>
     </nav>
   );
