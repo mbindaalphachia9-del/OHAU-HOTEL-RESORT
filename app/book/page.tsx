@@ -1,4 +1,29 @@
+"use client";
+
+import { useState } from "react";
+
 export default function BookPage() {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    room: "Deluxe Room",
+    checkIn: "",
+    checkOut: "",
+  });
+
+  async function submitReservation() {
+    await fetch("/api/reservations", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
+
+    alert("Reservation submitted successfully!");
+  }
+
   return (
     <main
       style={{
@@ -9,13 +34,7 @@ export default function BookPage() {
         fontFamily: "serif",
       }}
     >
-      <h1
-        style={{
-          color: "gold",
-          textAlign: "center",
-          fontSize: "50px",
-        }}
-      >
+      <h1 style={{ color: "gold", textAlign: "center" }}>
         Book Your Stay
       </h1>
 
@@ -26,77 +45,61 @@ export default function BookPage() {
           display: "flex",
           flexDirection: "column",
           gap: "20px",
-          marginTop: "50px",
         }}
       >
         <input
           placeholder="Full Name"
-          style={{
-            padding: "15px",
-            borderRadius: "10px",
-          }}
+          onChange={(e) =>
+            setForm({ ...form, name: e.target.value })
+          }
         />
 
         <input
-          placeholder="Email Address"
-          style={{
-            padding: "15px",
-            borderRadius: "10px",
-          }}
+          placeholder="Email"
+          onChange={(e) =>
+            setForm({ ...form, email: e.target.value })
+          }
         />
 
         <input
           placeholder="Phone Number"
-          style={{
-            padding: "15px",
-            borderRadius: "10px",
-          }}
+          onChange={(e) =>
+            setForm({ ...form, phone: e.target.value })
+          }
         />
 
         <input
           type="date"
-          style={{
-            padding: "15px",
-            borderRadius: "10px",
-          }}
+          onChange={(e) =>
+            setForm({ ...form, checkIn: e.target.value })
+          }
         />
 
         <input
           type="date"
-          style={{
-            padding: "15px",
-            borderRadius: "10px",
-          }}
+          onChange={(e) =>
+            setForm({ ...form, checkOut: e.target.value })
+          }
         />
 
         <select
-          style={{
-            padding: "15px",
-            borderRadius: "10px",
-          }}
+          onChange={(e) =>
+            setForm({ ...form, room: e.target.value })
+          }
         >
           <option>Deluxe Room</option>
           <option>Ocean View Suite</option>
           <option>Presidential Suite</option>
         </select>
 
-        <textarea
-          placeholder="Special Requests"
-          rows={5}
-          style={{
-            padding: "15px",
-            borderRadius: "10px",
-          }}
-        />
-
         <button
+          onClick={submitReservation}
           style={{
             backgroundColor: "gold",
             color: "black",
-            padding: "18px",
+            padding: "15px",
             border: "none",
             borderRadius: "10px",
-            fontSize: "18px",
             cursor: "pointer",
           }}
         >
