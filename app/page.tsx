@@ -7,12 +7,11 @@ export default function Home() {
     <main
       style={{
         backgroundColor: "#000",
-        color: "#fff",
+        color: "white",
         minHeight: "100vh",
-        fontFamily: "serif",
       }}
     >
-      {/* HERO SECTION */}
+      {/* Hero */}
 
       <section
         style={{
@@ -30,37 +29,36 @@ export default function Home() {
           OAHU HOTEL & RESORT
         </h1>
 
-        <h2
+        <p
           style={{
-            color: "white",
-            fontWeight: "normal",
+            fontSize: "25px",
           }}
         >
           Stay. Relax. Repeat.
-        </h2>
+        </p>
 
         <p
           style={{
-            color: "#ddd",
             maxWidth: "700px",
             margin: "auto",
+            color: "#ccc",
           }}
         >
-          Discover luxury, breathtaking ocean views, world-class dining,
-          and unforgettable experiences in Waikiki, Oahu, Hawaii.
+          Experience world-class luxury, ocean views, fine dining,
+          and unforgettable memories in Hawaii.
         </p>
 
         <Link href="/book">
           <button
             style={{
+              marginTop: "30px",
               backgroundColor: "gold",
               color: "black",
               border: "none",
               padding: "18px 40px",
-              borderRadius: "10px",
-              fontSize: "20px",
-              marginTop: "30px",
+              borderRadius: "15px",
               cursor: "pointer",
+              fontSize: "18px",
             }}
           >
             Book Your Stay
@@ -68,13 +66,9 @@ export default function Home() {
         </Link>
       </section>
 
-      {/* ROOMS */}
+      {/* Rooms */}
 
-      <section
-        style={{
-          padding: "50px",
-        }}
-      >
+      <section style={{ padding: "50px" }}>
         <h1 style={{ color: "gold", textAlign: "center" }}>
           Luxury Rooms
         </h1>
@@ -83,6 +77,7 @@ export default function Home() {
           style={{
             display: "grid",
             gap: "30px",
+            marginTop: "40px",
           }}
         >
           <div
@@ -93,7 +88,7 @@ export default function Home() {
             }}
           >
             <h2>🏨 Deluxe Room</h2>
-            <p>$299 / night</p>
+            <p>$299/night</p>
           </div>
 
           <div
@@ -104,7 +99,7 @@ export default function Home() {
             }}
           >
             <h2>🌊 Ocean View Suite</h2>
-            <p>$599 / night</p>
+            <p>$599/night</p>
           </div>
 
           <div
@@ -115,18 +110,14 @@ export default function Home() {
             }}
           >
             <h2>👑 Presidential Suite</h2>
-            <p>$1299 / night</p>
+            <p>$1299/night</p>
           </div>
         </div>
       </section>
 
-      {/* AMENITIES */}
+      {/* Amenities */}
 
-      <section
-        style={{
-          padding: "50px",
-        }}
-      >
+      <section style={{ padding: "50px" }}>
         <h1 style={{ color: "gold", textAlign: "center" }}>
           Amenities
         </h1>
@@ -135,25 +126,19 @@ export default function Home() {
           style={{
             display: "grid",
             gap: "20px",
+            marginTop: "40px",
           }}
         >
           <div>🏊 Infinity Pool</div>
-
           <div>🍽 Fine Dining</div>
-
           <div>🧖 Spa & Wellness</div>
-
-          <div>🏖 Private Beach Access</div>
+          <div>🏖 Beach Access</div>
         </div>
       </section>
 
-      {/* REVIEWS */}
+      {/* Reviews */}
 
-      <section
-        style={{
-          padding: "50px",
-        }}
-      >
+      <section style={{ padding: "50px" }}>
         <h1 style={{ color: "gold", textAlign: "center" }}>
           Guest Reviews
         </h1>
@@ -163,9 +148,10 @@ export default function Home() {
             backgroundColor: "#111",
             padding: "30px",
             borderRadius: "20px",
+            marginTop: "40px",
           }}
         >
-          ⭐⭐⭐⭐⭐ Amazing stay! Beautiful views and outstanding service.
+          ⭐⭐⭐⭐⭐ Amazing stay! Beautiful ocean views.
         </div>
 
         <br />
@@ -177,7 +163,7 @@ export default function Home() {
             borderRadius: "20px",
           }}
         >
-          ⭐⭐⭐⭐⭐ One of the finest resorts in Hawaii.
+          ⭐⭐⭐⭐⭐ One of Hawaii's finest resorts.
         </div>
       </section>
     </main>
