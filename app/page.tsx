@@ -4,10 +4,10 @@ export default function Home() {
       style={{
         backgroundColor: "#000",
         color: "#fff",
-        fontFamily: "Arial, sans-serif",
+        fontFamily: "serif",
       }}
     >
-      {/* Hero */}
+      {/* Hero Section */}
       <section
         style={{
           minHeight: "100vh",
@@ -19,13 +19,48 @@ export default function Home() {
           padding: "40px",
         }}
       >
-        <h1 style={{ color: "gold", fontSize: "60px" }}>
-          🌴 OAHU HOTEL & RESORT
-        </h1>
+        <div>
+          <div
+            style={{
+              color: "gold",
+              fontSize: "20px",
+              letterSpacing: "8px",
+            }}
+          >
+            ✦ ✦ ✦ ✦ ✦
+          </div>
 
-        <h2>Stay. Relax. Repeat.</h2>
+          <h1
+            style={{
+              color: "gold",
+              fontSize: "72px",
+              marginBottom: "0",
+              letterSpacing: "8px",
+            }}
+          >
+            OAHU
+          </h1>
 
-        <p>Luxury paradise in Waikiki, Oahu, Hawaii.</p>
+          <h2
+            style={{
+              color: "white",
+              marginTop: "10px",
+              letterSpacing: "6px",
+            }}
+          >
+            HOTEL & RESORT
+          </h2>
+
+          <p
+            style={{
+              color: "gold",
+              fontStyle: "italic",
+              fontSize: "20px",
+            }}
+          >
+            Stay. Relax. Repeat.
+          </p>
+        </div>
 
         <button
           onClick={() =>
@@ -35,11 +70,12 @@ export default function Home() {
           style={{
             backgroundColor: "gold",
             color: "black",
-            padding: "15px 30px",
-            borderRadius: "10px",
+            padding: "15px 35px",
             border: "none",
+            borderRadius: "10px",
             fontSize: "18px",
             cursor: "pointer",
+            marginTop: "30px",
           }}
         >
           Book Your Stay
@@ -51,21 +87,20 @@ export default function Home() {
         <h2 style={{ color: "gold" }}>🏨 Rooms & Suites</h2>
 
         <h3>Deluxe Room</h3>
-        <p>Elegant comfort with island-inspired interiors.</p>
+        <p>Elegant comfort with luxury furnishings.</p>
 
         <h3>Ocean View Suite</h3>
         <p>Private balcony overlooking Waikiki Beach.</p>
 
         <h3>Presidential Suite</h3>
-        <p>Exclusive luxury with panoramic ocean views.</p>
+        <p>The finest experience with panoramic ocean views.</p>
       </section>
 
       {/* Dining */}
       <section style={{ padding: "50px" }}>
-        <h2 style={{ color: "gold" }}>🍽 Dining Experience</h2>
+        <h2 style={{ color: "gold" }}>🍽 Fine Dining</h2>
         <p>
-          Enjoy world-class cuisine, tropical cocktails, and unforgettable
-          sunset dinners.
+          Enjoy world-class cuisine, tropical cocktails and sunset dinners.
         </p>
       </section>
 
@@ -73,15 +108,16 @@ export default function Home() {
       <section style={{ padding: "50px" }}>
         <h2 style={{ color: "gold" }}>🏊 Spa & Infinity Pool</h2>
         <p>
-          Relax with our luxury spa treatments and infinity pool overlooking
-          the Pacific Ocean.
+          Relax with premium spa treatments and breathtaking ocean views.
         </p>
       </section>
 
       {/* Gallery */}
       <section style={{ padding: "50px" }}>
         <h2 style={{ color: "gold" }}>📸 Gallery</h2>
-        <p>Experience breathtaking ocean views and tropical beauty.</p>
+        <p>
+          Experience paradise with beautiful beaches and luxury amenities.
+        </p>
       </section>
 
       {/* Reviews */}
@@ -89,11 +125,12 @@ export default function Home() {
         <h2 style={{ color: "gold" }}>⭐ Guest Reviews</h2>
 
         <p>
-          "Amazing stay! Exceptional service and beautiful views." — Sarah M.
+          "Absolutely incredible! The service and views were amazing." — Sarah
+          M.
         </p>
 
         <p>
-          "One of the finest resorts in Hawaii." — Michael T.
+          "One of the best resorts we've ever stayed in." — Michael T.
         </p>
       </section>
 
