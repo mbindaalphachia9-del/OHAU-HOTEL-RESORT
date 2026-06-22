@@ -1,29 +1,6 @@
 "use client";
 
-import { useState } from "react";
-
 export default function BookPage() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    room: "Deluxe Room",
-    checkIn: "",
-    checkOut: "",
-  });
-
-  async function submitReservation() {
-    await fetch("/api/reservations", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(form),
-    });
-
-    alert("Reservation submitted successfully!");
-  }
-
   return (
     <main
       style={{
@@ -47,53 +24,19 @@ export default function BookPage() {
           gap: "20px",
         }}
       >
-        <input
-          placeholder="Full Name"
-          onChange={(e) =>
-            setForm({ ...form, name: e.target.value })
-          }
-        />
+        <input placeholder="Full Name" />
+        <input placeholder="Email Address" />
+        <input placeholder="Phone Number" />
+        <input type="date" />
+        <input type="date" />
 
-        <input
-          placeholder="Email"
-          onChange={(e) =>
-            setForm({ ...form, email: e.target.value })
-          }
-        />
-
-        <input
-          placeholder="Phone Number"
-          onChange={(e) =>
-            setForm({ ...form, phone: e.target.value })
-          }
-        />
-
-        <input
-          type="date"
-          onChange={(e) =>
-            setForm({ ...form, checkIn: e.target.value })
-          }
-        />
-
-        <input
-          type="date"
-          onChange={(e) =>
-            setForm({ ...form, checkOut: e.target.value })
-          }
-        />
-
-        <select
-          onChange={(e) =>
-            setForm({ ...form, room: e.target.value })
-          }
-        >
+        <select>
           <option>Deluxe Room</option>
           <option>Ocean View Suite</option>
           <option>Presidential Suite</option>
         </select>
 
         <button
-          onClick={submitReservation}
           style={{
             backgroundColor: "gold",
             color: "black",
