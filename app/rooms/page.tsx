@@ -1,59 +1,47 @@
+import Link from "next/link";
+
 export default function RoomsPage() {
   return (
-    <main
-      style={{
-        backgroundColor: "#000",
-        color: "#fff",
-        minHeight: "100vh",
-        padding: "40px",
-      }}
-    >
-      <h1 style={{ color: "gold", textAlign: "center" }}>
+    <main style={{ padding: "80px 8%" }}>
+      <h1 className="gold" style={{ textAlign: "center" }}>
         Rooms & Suites
       </h1>
 
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "40px",
-          marginTop: "50px",
-        }}
-      >
-        <div
-          style={{
-            backgroundColor: "#111",
-            padding: "30px",
-            borderRadius: "20px",
-          }}
-        >
+      <div className="grid">
+        <div className="card">
           <h2>🏨 Deluxe Room</h2>
-          <p>$299/night</p>
-          <p>King Bed • WiFi • Smart TV • Balcony</p>
+          <p>$299 / night</p>
+          <p>King Bed • WiFi • Balcony • Smart TV</p>
+
+          <Link href="/book">
+            <button className="primary-btn">
+              Book Now
+            </button>
+          </Link>
         </div>
 
-        <div
-          style={{
-            backgroundColor: "#111",
-            padding: "30px",
-            borderRadius: "20px",
-          }}
-        >
+        <div className="card">
           <h2>🌊 Ocean View Suite</h2>
-          <p>$599/night</p>
-          <p>Ocean View • King Bed • Lounge Area • Balcony</p>
+          <p>$599 / night</p>
+          <p>Ocean View • Lounge Area • Mini Bar</p>
+
+          <Link href="/book">
+            <button className="primary-btn">
+              Book Now
+            </button>
+          </Link>
         </div>
 
-        <div
-          style={{
-            backgroundColor: "#111",
-            padding: "30px",
-            borderRadius: "20px",
-          }}
-        >
+        <div className="card">
           <h2>👑 Presidential Suite</h2>
-          <p>$1299/night</p>
-          <p>Private Jacuzzi • Living Room • Ocean View • VIP Service</p>
+          <p>$1299 / night</p>
+          <p>Private Jacuzzi • VIP Service • Ocean View</p>
+
+          <Link href="/book">
+            <button className="primary-btn">
+              Book Now
+            </button>
+          </Link>
         </div>
       </div>
     </main>
